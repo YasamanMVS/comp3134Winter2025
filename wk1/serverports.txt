@@ -1,0 +1,37 @@
+1. What is the definition of server port?
+
+Answer:
+	A server port acts like a “door” on a computer or server. Whenever data arrives, the port number helps ensure it goes to the 
+	correct application or service. Each port is uniquely identified by a number, so your system knows whether the data should 
+	be handled by a web server, an email server, or another service.
+
+
+2. What is the server port range?
+
+Answer:
+	Port numbers range from 0 to 65535.
+	• Well-known ports (0–1023): Used by core or standard services (e.g., web servers on port 80).
+	• Registered ports (1024–49151): Assigned to specific services or applications (e.g., databases, email services).
+	• Dynamic/private ports (49152–65535): Often assigned randomly for temporary uses (like in peer-to-peer connections).
+
+
+3. How many bits does the number above represent?
+
+Answer:
+	Because a port number can go up to 65535, it fits in a 16-bit unsigned integer.
+
+
+4. State 10 common server ports
+
+Answer:
+	Port 80 (HTTP) – Standard web traffic
+	Port 443 (HTTPS) – Secure web traffic (SSL/TLS)
+	Port 22 (SSH) – Secure remote logins
+	Port 21 (FTP) – File transfers
+	Port 25 (SMTP) – Outgoing email
+	Port 110 (POP3) – Basic email retrieval
+	Port 143 (IMAP) – Advanced email retrieval with server-side organization
+	Port 53 (DNS) – Domain name resolution (translating domain names into IP addresses)
+	Port 3306 (MySQL) – MySQL database connections
+	Port 3389 (RDP) – Remote Desktop for Windows systems
+
