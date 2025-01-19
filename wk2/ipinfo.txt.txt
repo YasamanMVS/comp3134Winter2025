@@ -1,0 +1,34 @@
+1.
+Twitter.com
+
+IP address	Type	Hosted by	Location
+104.244.42.1	IPv4    Twitter Inc.	United States of America
+
+
+
+2.
+Instagram.com
+
+IP address	 Type	 Hosted by	  Location
+157.240.22.174	 IPv4	 Facebook, Inc.	  United States of America
+
+
+3.
+Netflix.com
+
+IP address	Type	Hosted by	      Location
+44.242.13.161	IPv4	Amazon.com, Inc.      United States of America
+
+
+4.
+LinkedIn.com
+
+IP address	Type	Hosted by	        Location
+13.107.42.14	IPv4	Microsoft Corporation	United States of America
+
+
+5.
+Reddit.com
+
+IP address	Type	Hosted by	Location
+151.101.65.140	IPv4	Fastly, Inc.	United States of America

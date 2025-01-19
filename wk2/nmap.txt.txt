@@ -1,0 +1,196 @@
+
+Jasmine@Yasaman MINGW64 /
+$ ssh root@137.184.171.149
+root@137.184.171.149's password:
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-130-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Jan 19 22:24:48 UTC 2025
+
+  System load:  0.00439453125      Users logged in:       1
+  Usage of /:   12.1% of 24.05GB   IPv4 address for eth0: 137.184.171.149
+  Memory usage: 58%                IPv4 address for eth0: 10.20.0.5
+  Swap usage:   0%                 IPv4 address for eth1: 10.118.0.2
+  Processes:    102
+
+Expanded Security Maintenance for Applications is not enabled.
+
+101 updates can be applied immediately.
+2 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+3 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '24.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+********************************************************************************
+
+Welcome to DigitalOcean's 1-Click LAMP Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+
+In a web browser, you can view:
+ * The LAMP 1-Click Quickstart guide: https://do.co/3gY97ha#start
+ * Your LAMP website: http://137.184.171.149
+
+On the server:
+ * The default web root is located at /var/www/html
+ * If you're using the embedded database, the MySQL root password
+   is saved in /root/.digitalocean_password. If you've opted in to
+   using a DBaaS instance with DigitalOcean, you will find your
+   credentials written to /root/.digitalocean_dbaas_credentials
+   and you will have access to a DATABASE_URL environment variable
+   holding your database connection string.
+ * Certbot is preinstalled. Run it to configure HTTPS. See
+   https://do.co/3gY97ha#enable-https for more detail.
+
+For help and more information, visit https://do.co/3gY97ha
+
+********************************************************************************
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+Last login: Sun Jan 19 22:14:54 2025 from 99.228.47.40
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# apt-get update
+Hit:1 http://mirrors.digitalocean.com/ubuntu jammy InRelease
+Hit:2 http://mirrors.digitalocean.com/ubuntu jammy-updates InRelease
+Hit:3 http://mirrors.digitalocean.com/ubuntu jammy-backports InRelease
+Hit:4 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease
+Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:6 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy InRelease
+Reading package lists... Done
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# apt-get install nmap
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libblas3 liblinear4 lua-lpeg nmap-common
+Suggested packages:
+  liblinear-tools liblinear-dev ncat ndiff zenmap
+The following NEW packages will be installed:
+  libblas3 liblinear4 lua-lpeg nmap nmap-common
+0 upgraded, 5 newly installed, 0 to remove and 92 not upgraded.
+Need to get 5973 kB of archives.
+After this operation, 26.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] yes
+Get:1 http://mirrors.digitalocean.com/ubuntu jammy/main amd64 libblas3 amd64 3.10.0-2ubuntu1 [228 kB]
+Get:2 http://mirrors.digitalocean.com/ubuntu jammy/universe amd64 liblinear4 amd64 2.3.0+dfsg-5 [41.4 kB]
+Get:3 http://mirrors.digitalocean.com/ubuntu jammy/universe amd64 lua-lpeg amd64 1.0.2-1 [31.4 kB]
+Get:4 http://mirrors.digitalocean.com/ubuntu jammy-updates/universe amd64 nmap-common all 7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1 [3940 kB]
+Get:5 http://mirrors.digitalocean.com/ubuntu jammy-updates/universe amd64 nmap amd64 7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1 [1731 kB]
+Fetched 5973 kB in 0s (18.7 MB/s)
+Selecting previously unselected package libblas3:amd64.
+(Reading database ... 97447 files and directories currently installed.)
+Preparing to unpack .../libblas3_3.10.0-2ubuntu1_amd64.deb ...
+Unpacking libblas3:amd64 (3.10.0-2ubuntu1) ...
+Selecting previously unselected package liblinear4:amd64.
+Preparing to unpack .../liblinear4_2.3.0+dfsg-5_amd64.deb ...
+Unpacking liblinear4:amd64 (2.3.0+dfsg-5) ...
+Selecting previously unselected package lua-lpeg:amd64.
+Preparing to unpack .../lua-lpeg_1.0.2-1_amd64.deb ...
+Unpacking lua-lpeg:amd64 (1.0.2-1) ...
+Selecting previously unselected package nmap-common.
+Preparing to unpack .../nmap-common_7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1_all.deb ...
+Unpacking nmap-common (7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1) ...
+Selecting previously unselected package nmap.
+Preparing to unpack .../nmap_7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1_amd64.deb ...
+Unpacking nmap (7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1) ...
+Setting up lua-lpeg:amd64 (1.0.2-1) ...
+Setting up libblas3:amd64 (3.10.0-2ubuntu1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+Setting up nmap-common (7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1) ...
+Setting up liblinear4:amd64 (2.3.0+dfsg-5) ...
+Setting up nmap (7.91+dfsg1+really7.80+dfsg1-2ubuntu0.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap --version
+Nmap version 7.80 ( https://nmap.org )
+Platform: x86_64-pc-linux-gnu
+Compiled with: liblua-5.3.6 openssl-3.0.2 nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.45 libpcap-1.10.1 nmap-libdnet-1.12 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+
+
+
+1.
+To use Nmap to scan 1000 TCP ports
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap 8.8.8.8
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-19 22:32 UTC
+Nmap scan report for dns.google (8.8.8.8)
+Host is up (0.0018s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 4.28 seconds
+
+
+2.
+To scan a single Port
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap -p 80 8.8.8.8
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-19 22:32 UTC
+Nmap scan report for dns.google (8.8.8.8)
+Host is up (0.0019s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+
+Nmap done: 1 IP address (1 host up) scanned in 0.25 seconds
+
+
+3.
+To scan a range of ports
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap -p 80-90 8.8.8.8
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-19 22:33 UTC
+Nmap scan report for dns.google (8.8.8.8)
+Host is up (0.0021s latency).
+
+PORT   STATE    SERVICE
+80/tcp filtered http
+81/tcp filtered hosts2-ns
+82/tcp filtered xfer
+83/tcp filtered mit-ml-dev
+84/tcp filtered ctf
+85/tcp filtered mit-ml-dev
+86/tcp filtered mfcobol
+87/tcp filtered priv-term-l
+88/tcp filtered kerberos-sec
+89/tcp filtered su-mit-tg
+90/tcp filtered dnsix
+
+Nmap done: 1 IP address (1 host up) scanned in 1.45 seconds
+
+
+4.
+To scan 100 most common ports (Fast)
+
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# nmap -F 8.8.8.8
+Starting Nmap 7.80 ( https://nmap.org ) at 2025-01-19 22:33 UTC
+Nmap scan report for dns.google (8.8.8.8)
+Host is up (0.0018s latency).
+Not shown: 98 filtered ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 1.86 seconds

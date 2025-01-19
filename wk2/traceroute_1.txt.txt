@@ -1,0 +1,113 @@
+Jasmine@Yasaman MINGW64 /
+$ ssh root@137.184.171.149
+root@137.184.171.149's password:
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-130-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Jan 19 22:14:54 UTC 2025
+
+  System load:  0.0                Users logged in:       1
+  Usage of /:   12.1% of 24.05GB   IPv4 address for eth0: 137.184.171.149
+  Memory usage: 58%                IPv4 address for eth0: 10.20.0.5
+  Swap usage:   0%                 IPv4 address for eth1: 10.118.0.2
+  Processes:    102
+
+Expanded Security Maintenance for Applications is not enabled.
+
+101 updates can be applied immediately.
+2 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+2 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '24.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+********************************************************************************
+
+Welcome to DigitalOcean's 1-Click LAMP Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+
+In a web browser, you can view:
+ * The LAMP 1-Click Quickstart guide: https://do.co/3gY97ha#start
+ * Your LAMP website: http://137.184.171.149
+
+On the server:
+ * The default web root is located at /var/www/html
+ * If you're using the embedded database, the MySQL root password
+   is saved in /root/.digitalocean_password. If you've opted in to
+   using a DBaaS instance with DigitalOcean, you will find your
+   credentials written to /root/.digitalocean_dbaas_credentials
+   and you will have access to a DATABASE_URL environment variable
+   holding your database connection string.
+ * Certbot is preinstalled. Run it to configure HTTPS. See
+   https://do.co/3gY97ha#enable-https for more detail.
+
+For help and more information, visit https://do.co/3gY97ha
+
+********************************************************************************
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+Last login: Sun Jan 19 22:04:01 2025 from 99.228.47.40
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:2 http://mirrors.digitalocean.com/ubuntu jammy InRelease
+Hit:3 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease
+Hit:4 http://mirrors.digitalocean.com/ubuntu jammy-updates InRelease
+Hit:5 http://mirrors.digitalocean.com/ubuntu jammy-backports InRelease
+Hit:6 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy InRelease
+Fetched 129 kB in 7s (18.4 kB/s)
+Reading package lists... Done
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# apt-get install traceroute
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  traceroute
+0 upgraded, 1 newly installed, 0 to remove and 92 not upgraded.
+Need to get 45.4 kB of archives.
+After this operation, 152 kB of additional disk space will be used.
+Get:1 http://mirrors.digitalocean.com/ubuntu jammy/universe amd64 traceroute amd64 1:2.1.0-2 [45.4 kB]
+Fetched 45.4 kB in 0s (488 kB/s)
+Selecting previously unselected package traceroute.
+(Reading database ... 97427 files and directories currently installed.)
+Preparing to unpack .../traceroute_1%3a2.1.0-2_amd64.deb ...
+Unpacking traceroute (1:2.1.0-2) ...
+Setting up traceroute (1:2.1.0-2) ...
+update-alternatives: using /usr/bin/traceroute.db to provide /usr/bin/traceroute (traceroute) in auto mode
+update-alternatives: using /usr/bin/traceroute6.db to provide /usr/bin/traceroute6 (traceroute6) in auto mode
+update-alternatives: using /usr/bin/lft.db to provide /usr/bin/lft (lft) in auto mode
+update-alternatives: using /usr/bin/traceproto.db to provide /usr/bin/traceproto (traceproto) in auto mode
+update-alternatives: using /usr/sbin/tcptraceroute.db to provide /usr/sbin/tcptraceroute (tcptraceroute) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# traceroute --version
+Modern traceroute for Linux, version 2.1.0
+Copyright (c) 2016  Dmitry Butskoy,   License: GPL v2 or any later
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# traceroute google.com
+traceroute to google.com (172.217.165.14), 30 hops max, 60 byte packets
+ 1  162.243.190.5 (162.243.190.5)  1.859 ms  1.836 ms  1.820 ms
+ 2  143.244.192.136 (143.244.192.136)  1.704 ms 143.244.192.124 (143.244.192.124)  1.654 ms 143.244.192.126 (143.244.192.126)  1.618 ms
+ 3  143.244.224.50 (143.244.224.50)  1.726 ms  1.720 ms  1.759 ms
+ 4  143.244.224.37 (143.244.224.37)  1.644 ms 143.244.224.45 (143.244.224.45)  1.547 ms 143.244.224.39 (143.244.224.39)  1.573 ms
+ 5  146.190.180.67 (146.190.180.67)  3.269 ms 146.190.180.55 (146.190.180.55)  3.420 ms 146.190.180.67 (146.190.180.67)  3.181 ms
+ 6  * * *
+ 7  172.253.69.112 (172.253.69.112)  1.918 ms 142.251.68.26 (142.251.68.26)  2.026 ms 172.253.69.114 (172.253.69.114)  1.657 ms
+ 8  yyz12s06-in-f14.1e100.net (172.217.165.14)  1.736 ms 192.178.98.198 (192.178.98.198)  1.711 ms 216.239.41.175 (216.239.41.175)  2.524 ms
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~#

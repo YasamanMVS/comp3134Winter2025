@@ -1,0 +1,142 @@
+Jasmine@Yasaman MINGW64 /
+$ ping 137.184.171.149
+
+Pinging 137.184.171.149 with 32 bytes of data:
+Reply from 137.184.171.149: bytes=32 time=27ms TTL=55
+Reply from 137.184.171.149: bytes=32 time=18ms TTL=55
+Reply from 137.184.171.149: bytes=32 time=330ms TTL=55
+Reply from 137.184.171.149: bytes=32 time=21ms TTL=55
+
+Ping statistics for 137.184.171.149:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 18ms, Maximum = 330ms, Average = 99ms
+
+Jasmine@Yasaman MINGW64 /
+$ ssh root@137.184.171.149
+The authenticity of host '137.184.171.149 (137.184.171.149)' can't be established.
+ED25519 key fingerprint is SHA256:7fOq2IEkLNadaYEc1XlC9rqKTDt2XNZSrTPOkM8wRF4.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+
+Jasmine@Yasaman MINGW64 /
+$ $ ssh root@137.184.171.149
+The authenticity of host '137.184.171.149 (137.184.171.149)' can't be established.
+ED25519 key fingerprint is SHA256:7fOq2IEkLNadaYEc1XlC9rqKTDt2XNZSrTPOkM8wRF4.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+bash: $: command not found
+>
+> ^C
+
+Jasmine@Yasaman MINGW64 /
+$ ssh root@137.184.171.149
+The authenticity of host '137.184.171.149 (137.184.171.149)' can't be established.
+ED25519 key fingerprint is SHA256:7fOq2IEkLNadaYEc1XlC9rqKTDt2XNZSrTPOkM8wRF4.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '137.184.171.149' (ED25519) to the list of known hosts.
+root@137.184.171.149's password:
+Permission denied, please try again.
+root@137.184.171.149's password:
+Permission denied, please try again.
+root@137.184.171.149's password:
+root@137.184.171.149: Permission denied (publickey,password).
+
+Jasmine@Yasaman MINGW64 /
+$ ^[[200~ssh root@137.184.171.149
+bash: $'\E[200~ssh': command not found
+
+Jasmine@Yasaman MINGW64 /
+$ ssh root@137.184.171.149
+root@137.184.171.149's password:
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-130-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Jan 19 22:04:00 UTC 2025
+
+  System load:  0.041015625        Users logged in:       1
+  Usage of /:   12.1% of 24.05GB   IPv4 address for eth0: 137.184.171.149
+  Memory usage: 57%                IPv4 address for eth0: 10.20.0.5
+  Swap usage:   0%                 IPv4 address for eth1: 10.118.0.2
+  Processes:    102
+
+Expanded Security Maintenance for Applications is not enabled.
+
+101 updates can be applied immediately.
+2 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+2 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '24.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+********************************************************************************
+
+Welcome to DigitalOcean's 1-Click LAMP Droplet.
+To keep this Droplet secure, the UFW firewall is enabled.
+All ports are BLOCKED except 22 (SSH), 80 (HTTP), and 443 (HTTPS).
+
+In a web browser, you can view:
+ * The LAMP 1-Click Quickstart guide: https://do.co/3gY97ha#start
+ * Your LAMP website: http://137.184.171.149
+
+On the server:
+ * The default web root is located at /var/www/html
+ * If you're using the embedded database, the MySQL root password
+   is saved in /root/.digitalocean_password. If you've opted in to
+   using a DBaaS instance with DigitalOcean, you will find your
+   credentials written to /root/.digitalocean_dbaas_credentials
+   and you will have access to a DATABASE_URL environment variable
+   holding your database connection string.
+ * Certbot is preinstalled. Run it to configure HTTPS. See
+   https://do.co/3gY97ha#enable-https for more detail.
+
+For help and more information, visit https://do.co/3gY97ha
+
+********************************************************************************
+To delete this message of the day: rm -rf /etc/update-motd.d/99-one-click
+Last login: Sun Jan 19 21:16:54 2025
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# apt-get update
+Hit:1 http://mirrors.digitalocean.com/ubuntu jammy InRelease
+Get:2 http://mirrors.digitalocean.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:3 https://repos-droplet.digitalocean.com/apt/droplet-agent main InRelease
+Get:4 http://mirrors.digitalocean.com/ubuntu jammy-backports InRelease [127 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:6 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy InRelease [24.6 kB]
+Get:7 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy/main amd64 Packages [135 kB]
+Get:8 https://ppa.launchpadcontent.net/ondrej/php/ubuntu jammy/main Translation-en [42.5 kB]
+Fetched 586 kB in 8s (78.0 kB/s)
+Reading package lists... Done
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# apt-get install apache2-utils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+apache2-utils is already the newest version (2.4.52-1ubuntu4.12).
+0 upgraded, 0 newly installed, 0 to remove and 92 not upgraded.
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~# ping 137.184.171.149
+PING 137.184.171.149 (137.184.171.149) 56(84) bytes of data.
+64 bytes from 137.184.171.149: icmp_seq=1 ttl=64 time=0.032 ms
+64 bytes from 137.184.171.149: icmp_seq=2 ttl=64 time=0.059 ms
+64 bytes from 137.184.171.149: icmp_seq=3 ttl=64 time=0.060 ms
+64 bytes from 137.184.171.149: icmp_seq=4 ttl=64 time=0.077 ms
+64 bytes from 137.184.171.149: icmp_seq=5 ttl=64 time=0.077 ms
+64 bytes from 137.184.171.149: icmp_seq=6 ttl=64 time=0.090 ms
+64 bytes from 137.184.171.149: icmp_seq=7 ttl=64 time=0.058 ms
+64 bytes from 137.184.171.149: icmp_seq=8 ttl=64 time=0.072 ms
+64 bytes from 137.184.171.149: icmp_seq=9 ttl=64 time=0.060 ms
+64 bytes from 137.184.171.149: icmp_seq=10 ttl=64 time=0.068 ms
+64 bytes from 137.184.171.149: icmp_seq=11 ttl=64 time=0.059 ms
+64 bytes from 137.184.171.149: icmp_seq=12 ttl=64 time=0.066 ms
+64 bytes from 137.184.171.149: icmp_seq=13 ttl=64 time=0.062 ms
+^C
+--- 137.184.171.149 ping statistics ---
+13 packets transmitted, 13 received, 0% packet loss, time 12282ms
+rtt min/avg/max/mdev = 0.032/0.064/0.090/0.013 ms
+root@lamp-ubuntu-s-1vcpu-1gb-tor1-01:~#
